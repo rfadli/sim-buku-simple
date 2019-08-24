@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+include 'koneksi.php';
 ?>
 
     <div class="container">
@@ -25,8 +26,26 @@ include 'header.php';
         <label class="col-sm-2 col-form-label">Penulis</label>
         <div class="col-sm-10">
           <select name="penulis" class="form-control">
-            <option value="rian">rian</option>
-            <option value="fadli">fadli</option>
+            <?php
+            $penulis = mysqli_query($konek, "SELECT * FROM penulis");
+            while ($p = mysqli_fetch_array($penulis)) {
+              echo "<option value='$p[id_penulis]'>".strtoupper($p[nama_penulis])."</option>";
+            }
+            ?>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Kategori</label>
+        <div class="col-sm-10">
+          <select name="kategori" class="form-control">
+            <?php
+            $kategori = mysqli_query($konek, "SELECT * FROM kategori");
+            while ($k = mysqli_fetch_array($kategori)) {
+              echo "<option value='$k[id_kategori]'>".strtoupper($k[nama_kategori])."</option>";
+            }
+            ?>
           </select>
         </div>
       </div>

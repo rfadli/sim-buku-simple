@@ -16,31 +16,18 @@ include 'koneksi.php';
       <?php
       $sql = "SELECT b.isbn,b.judul_buku,b.harga,p.nama_penulis,k.nama_kategori
               FROM buku as b,penulis as p,kategori as k
-              WHERE b.id_penulis=p.id_penulis and k.id_kategori=b.id_kategori";
+              WHERE b.id_penulis=p.id_penulis and k.id_kategori=b.id_kategori order by b.isbn ASC";
       $buku = mysqli_query($konek, $sql);
       while ($row = mysqli_fetch_array($buku)) 
       {
         echo "<tr>
-          <td>$row[isbn]</td>
-          <td>$row[judul_buku]</td>
-          <td>$row[penulis]</td>
-          <td>$row[harga]</td>
-        </tr>";
+                <td>$row[isbn]</td>
+                <td>$row[judul_buku]</td>
+                <td>$row[nama_penulis]</td>
+                <td>$row[harga]</td>
+              </tr>";
       }
       ?>
-       <tr><td>123456</td><td>Buku saya</td><td>Rian</td><td>90000</td></tr>
-      <tr>
-        <td>123456</td>
-        <td>Buku Informatika</td>
-        <td>Rian</td>
-        <td>80000</td>
-      </tr>
-      <tr>
-        <td>123456</td>
-        <td>Buku SQL</td>
-        <td>Rian</td>
-        <td>145000</td>
-      </tr>
     </table>
     
     <div class="float-right">
