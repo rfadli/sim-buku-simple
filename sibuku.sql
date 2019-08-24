@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 24, 2019 at 04:42 AM
+-- Generation Time: Aug 24, 2019 at 06:59 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -34,18 +34,28 @@ CREATE TABLE `buku` (
   `id_penulis` int(11) NOT NULL,
   `id_kategori` int(11) NOT NULL,
   `deskripsi` text NOT NULL,
-  `harga` int(11) NOT NULL
+  `harga` int(11) NOT NULL,
+  `cover` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `buku`
 --
 
-INSERT INTO `buku` (`isbn`, `judul_buku`, `id_penulis`, `id_kategori`, `deskripsi`, `harga`) VALUES
-('123456', 'hahahah', 2, 1, 'text', 90000),
-('987654', 'babababababa', 3, 1, 'text', 100000),
-('9876577', 'Proto Type C#', 2, 2, 'ini text', 25000),
-('9876578', 'Java Script', 2, 2, 'text ', 150000);
+INSERT INTO `buku` (`isbn`, `judul_buku`, `id_penulis`, `id_kategori`, `deskripsi`, `harga`, `cover`) VALUES
+('12887', 'judul_buku', 0, 2, 'test', 0, ''),
+('201710209', 'TRIK SEO DAN SECURITY CODEIGNITER', 1, 2, 'sample text', 60000, '16ci-security-miring.jpg'),
+('201710210', 'judul_buku', 0, 2, '1234', 0, ''),
+('2017102131', 'Seminggu Menguasai Bahasa Pemograman Kotlin', 1, 1, 'sample text', 100000, ''),
+('2017102132', 'Menguasai Database Oracle Untuk Orang Awam', 1, 1, 'sample text', 10000, ''),
+('2017102133', 'Pembahasan 10 Proyek PHP Untuk Tugas Akhir', 2, 1, 'sample text', 20000, ''),
+('2017102134', 'Ebook Menguasai Bahasa Pemograman PHP Dan Oracle', 1, 1, 'sample text', 120000, ''),
+('2017102135', '20 Judul Tugas Akhir Untuk Mahasiswa Informatika', 1, 2, 'sample text', 100000, ''),
+('2017102136', 'Membangun sistem informasi rumah sakit dengan codeigniter', 4, 2, 'sample text', 90000, ''),
+('2017102137', 'membangun sistem informasi sekolah dengan codeigni', 1, 2, 'sample text', 145000, ''),
+('2017102138', 'Membangun layanan sms gateway dengan codeigniter dan mysql', 2, 2, 'sample text', 145000, ''),
+('2017102139', 'seminggu jago codeigniter dan bootstrap', 4, 2, 'sample text', 100000, ''),
+('2017102165', 'Paket Belajar Web Programming all in one', 1, 2, 'sample text', 145000, '');
 
 -- --------------------------------------------------------
 
