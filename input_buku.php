@@ -7,7 +7,7 @@ include 'koneksi.php';
     
 
     <h3>Form Input Buku</h3>
-    <form action="" method="">
+    <form action="simpan_buku.php" method="POST">
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">ISBN</label>
         <div class="col-sm-10">
@@ -29,7 +29,7 @@ include 'koneksi.php';
             <?php
             $penulis = mysqli_query($konek, "SELECT * FROM penulis");
             while ($p = mysqli_fetch_array($penulis)) {
-              echo "<option value='$p[id_penulis]'>".strtoupper($p[nama_penulis])."</option>";
+              echo "<option value='".$p[id_penulis]."'>".strtoupper($p[nama_penulis])."</option>";
             }
             ?>
           </select>
@@ -43,7 +43,7 @@ include 'koneksi.php';
             <?php
             $kategori = mysqli_query($konek, "SELECT * FROM kategori");
             while ($k = mysqli_fetch_array($kategori)) {
-              echo "<option value='$k[id_kategori]'>".strtoupper($k[nama_kategori])."</option>";
+              echo "<option value='".$k[id_kategori]."'>".strtoupper($k[nama_kategori])."</option>";
             }
             ?>
           </select>
