@@ -1,6 +1,5 @@
 <?php
 include 'header.php';
-include 'koneksi.php';
 ?>
 
     <div class="container">
@@ -11,6 +10,7 @@ include 'koneksi.php';
         <th>JUDUL BUKU</th>
         <th>PENULIS</th>
         <th>HARGA</th>
+        <th>Action</th>
       </tr>
 
       <?php
@@ -25,6 +25,7 @@ include 'koneksi.php';
                 <td>$row[judul_buku]</td>
                 <td>$row[nama_penulis]</td>
                 <td>$row[harga]</td>
+                <td><a href='edit_buku.php?isbn=$row[isbn]' class='btn btn-success btn-sm'>Edit</a></td>
               </tr>";
       }
       ?>

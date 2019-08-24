@@ -1,3 +1,6 @@
+<?php
+include 'koneksi.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,7 +27,7 @@
             <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">DATA BUKU</a>
+            <a class="nav-link" href="index.php">DATA BUKU</a>
           </li>
            <li class="nav-item">
             <a class="nav-link" href="#">DATA PENULIS</a>
