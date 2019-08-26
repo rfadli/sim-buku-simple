@@ -10,11 +10,11 @@ $row = mysqli_fetch_array($buku);
     
 
     <h3>Edit Buku</h3>
-    <form action="simpan_buku.php" method="POST">
+    <form action="update_buku.php" method="POST">
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">ISBN</label>
         <div class="col-sm-10">
-          <input type="text" name="isbn" value="<?php echo $row['isbn'] ?>" placeholder="masukan isbn" class="form-control">
+          <input readonly="" type="text" name="isbn" value="<?php echo $row['isbn'] ?>" placeholder="masukan isbn" class="form-control">
         </div>
       </div>
 
@@ -32,13 +32,13 @@ $row = mysqli_fetch_array($buku);
             <?php
             $penulis = mysqli_query($konek, "SELECT * FROM penulis");
             while ($p = mysqli_fetch_array($penulis)) {
-              echo "<option value='$p[id_penulis]' ";
+              echo "<option value='".$p['id_penulis']."' ";
 
               if($row['id_penulis'] == $p['id_penulis']){
                 echo "selected";
               }
 
-              echo ">$p[nama_penulis]</option>";
+              echo ">".$p['nama_penulis']."</option>";
             }
             ?>
           </select>
