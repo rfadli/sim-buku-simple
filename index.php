@@ -15,10 +15,10 @@ include 'header.php';
 
       <?php
       $batas = 3;
-      $halaman = $_GET['hal'];
+      $halaman = isset($_GET['hal'])?$_GET['hal']:0;
       $sql = "SELECT b.isbn,b.judul_buku,b.harga,p.nama_penulis,k.nama_kategori
               FROM buku as b,penulis as p,kategori as k
-              WHERE b.id_penulis=p.id_penulis and k.id_kategori=b.id_kategori order by b.isbn ASC LIMIT $batas,$halaman";
+              WHERE b.id_penulis=p.id_penulis and k.id_kategori=b.id_kategori order by b.isbn ASC LIMIT $halaman,$batas";
       $buku = mysqli_query($konek, $sql);
       while ($row = mysqli_fetch_array($buku)) 
       {
@@ -55,7 +55,7 @@ include 'header.php';
           echo "<li class='page-item'><a class='page-link' href='index.php?hal=$hal'>$hal</a></li>";
         }
         ?>
-        <li class="page-item"><a class="page-link" href="index.php?hal=$halaman">Next</a></li>
+        <li class="page-item"><a class="page-link" href="">Next</a></li>
       </ul>
     </nav>
     </div>
