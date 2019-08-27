@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 24, 2019 at 06:59 AM
+-- Generation Time: Aug 27, 2019 at 10:25 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -43,8 +43,7 @@ CREATE TABLE `buku` (
 --
 
 INSERT INTO `buku` (`isbn`, `judul_buku`, `id_penulis`, `id_kategori`, `deskripsi`, `harga`, `cover`) VALUES
-('12887', 'judul_buku', 0, 2, 'test', 0, ''),
-('201710209', 'TRIK SEO DAN SECURITY CODEIGNITER', 1, 2, 'sample text', 60000, '16ci-security-miring.jpg'),
+('201710209', 'TRIK SEO DAN SECURITY CODEIGNITER', 1, 3, 'sample text', 60000, '16ci-security-miring.jpg'),
 ('201710210', 'judul_buku', 0, 2, '1234', 0, ''),
 ('2017102131', 'Seminggu Menguasai Bahasa Pemograman Kotlin', 1, 1, 'sample text', 100000, ''),
 ('2017102132', 'Menguasai Database Oracle Untuk Orang Awam', 1, 1, 'sample text', 10000, ''),
@@ -119,10 +118,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama_lengkap`, `email`, `password`) VALUES
-(2, 'Durratul Hafizah', 'hafizah@gmail.com', '$2y$04$F7OsPGXr7g.D1mEQDbLLcuOhWiCTX69PFV3MrPdiOp7WIVsLPmDKC'),
-(12, 'MUHAMMAD HAFIDZ MUZAKI', 'hafid@gmail.com', '$2y$04$x64sTW/XZqehXyunluJaieUvObOqslyI9ycu1ZgIpvg1eK9LWaNBO'),
-(16, 'NURIS AKBAR', 'nuris.akbar@gmail.com', '$2y$04$vtozW24qFFANDkWMySqrS.m4o5V1hVuygEhWWkOdnOfDfg/PjUw.a'),
-(17, 'Wahyu Safrizal', 'wahyusafrizal@gmail.com', '$2y$04$Sz1mrbfF3gzkVK9fqiVqv.p6Db4ku3G7le1vAjomh4UMNMnxdF2nu');
+(23, 'admin 3', 'admin3@gmail.com', '$2y$04$pHMEqHs70zUyEubDCFD.2e0Y8rlmrUvFQTHS/VOCeLjMXsw4VjCAW'),
+(24, 'Super Admin', 'admin@admin.com', '$2y$04$3bt35s7INoVA9vGKq.jSPOvqcVHy0paKqGfgTpJRVvsViq3Cx9.rO'),
+(25, 'Rian', 'rian@gmail.com', '$2y$10$SvV.VyOYn5/wH2fdYybWCeGr/mLZkK/CMde23P9YvmXjVAk4gOtDa');
 
 --
 -- Indexes for dumped tables
@@ -172,7 +170,7 @@ ALTER TABLE `penulis`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
