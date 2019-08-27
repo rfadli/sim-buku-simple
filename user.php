@@ -34,7 +34,7 @@ include 'header.php';
           if(isset($_POST['pencarian'])){
               //query pencarian data
               $keyword = $_POST['keyword'];
-              $sql = "SELECT * FROM user WHERE nama_lengkap like '%$keyword%' order by b.isbn ASC LIMIT $halaman,$batas";
+              $sql = "SELECT * FROM user WHERE nama_lengkap like '%$keyword%' order by nama_lengkap ASC LIMIT $halaman,$batas";
           }else{
 
               $sql = "SELECT * FROM user ORDER BY nama_lengkap ASC LIMIT $halaman, $batas";

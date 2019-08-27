@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(empty($_SESSION['status_login'])) {
+
+  header("location:login.php");
+}
+
 include 'koneksi.php';
 ?>
 <!doctype html>
@@ -44,10 +50,10 @@ include 'koneksi.php';
 
         <ul class="nav navbar-nav navbar-right">
           <li class="nav-item">
-            <a href="" class="nav-link">Rian</a>
+            <a href="" class="nav-link"><?php echo $_SESSION['nama_user'] ?></a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link">Logout</a>
+            <a href="logout.php" class="nav-link">Logout</a>
           </li>
         </ul>
 

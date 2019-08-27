@@ -1,7 +1,8 @@
 <?php
 
 $nama_lengkap 	= $_POST['nama_lengkap'];
-$pass 		 	= $_POST['password'];
+$option			= array("cost" => 4);
+$pass 		 	= password_hash($_POST['password'],PASSWORD_BCRYPT,$option);
 $email 			= $_POST['email'];
 $id_user		= $_POST['id_user'];
 

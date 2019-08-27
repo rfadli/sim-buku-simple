@@ -1,5 +1,5 @@
 <?php
-$id_user = isset($_GET['id']);
+$id_user = $_GET['id'];
 
 if($id_user){
 
