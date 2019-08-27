@@ -10,6 +10,11 @@ include 'koneksi.php';
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style type="text/css">
+      .container{
+        margin-top: 20px;
+      }
+    </style>
 
     <title>Aplikasi Pengelola Buku</title>
   </head>
@@ -33,7 +38,7 @@ include 'koneksi.php';
             <a class="nav-link" href="#">DATA PENULIS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">DATA USER</a>
+            <a class="nav-link" href="user.php">DATA USER</a>
           </li>
         </ul>
 
